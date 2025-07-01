@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中興園藝系學會</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #005A31; /* A green tone inspired by NCHU */
+            --secondary-color: #333;
+            --background-color: #f8f9fa;
+            --surface-color: #ffffff;
+            --text-color: #343a40;
+            --header-bg: #fff;
+            --header-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            --card-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            --border-radius: 12px;
+        }
+
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--header-bg);
+            color: var(--primary-color);
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: var(--header-shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        header .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-right: 1rem;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li a {
+            display: block;
+            color: var(--secondary-color);
+            text-align: center;
+            padding: 10px 15px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .container {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section {
+            background-color: var(--surface-color);
+            margin-bottom: 2rem;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--card-shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+        }
+
+        .section h2 {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        .activity-list, .document-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .activity-list li, .document-list li {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .activity-list li:last-child, .document-list li:last-child {
+            border-bottom: none;
+        }
+
+        .activity-list a, .document-list a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .activity-list a:hover, .document-list a:hover {
+            color: #0056b3;
+        }
+
+        /* Form Styles */
+        .suggestion-form textarea {
+            width: 100%;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            min-height: 150px;
+            margin-bottom: 1rem;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        .suggestion-form button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .suggestion-form button:hover {
+            background-color: #004628;
+        }
+
+
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: auto;
+        }
+        
+        .maintainer-info {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 1rem;
+            }
+            nav ul {
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                margin-top: 1rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <div class="logo">LOGO</div>
+            <h1>中興園藝系學會</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">關於系學會</a></li>
+                <li><a href="#activities">系上活動</a></li>
+                <li><a href="#documents">各項資料</a></li>
+                <li><a href="#suggestion">匿名建議</a></li>
+                <li><a href="#contact">聯絡我們</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div id="about" class="section">
+            <h2>關於系學會</h2>
+            <p>這裡是關於中興園藝系學會的介紹。我們致力於為系上同學服務，舉辦各式活動，並作為師生間的溝通橋樑。</p>
+        </div>
+
+        <div id="activities" class="section">
+            <h2>園藝系的活動</h2>
+            <ul class="activity-list">
+                <li><a href="#">迎新宿營 (點此查看活動照片)</a></li>
+                <li><a href="#">園藝週 (點此查看活動照片)</a></li>
+                <li><a href="#">企業參訪 (點此查看活動照片)</a></li>
+            </ul>
+        </div>
+
+        <div id="documents" class="section">
+            <h2>各項資料</h2>
+            <h3>各項法規</h3>
+            <ul class="document-list">
+                <li><a href="#">系學會組織章程</a></li>
+            </ul>
+            <h3>各式表格</h3>
+            <ul class="document-list">
+                <li><a href="#">活動經費申請表</a></li>
+            </ul>
+            <h3>財產</h3>
+            <ul class="document-list">
+                <li><a href="#">財產清單</a></li>
+                <li><a href="#">預算表</a></li>
+                <li><a href="#">收支表</a></li>
+            </ul>
+            <h3>會議記錄</h3>
+            <ul class="document-list">
+                <li><a href="#">近期會議記錄</a></li>
+            </ul>
+        </div>
+        
+        <div id="fees" class="section">
+            <h2>系費說明</h2>
+            <p>這裡將詳細說明系費的用途與繳交方式。</p>
+        </div>
+        
+        <div id="transport" class="section">
+            <h2>交通資訊</h2>
+            <p>前往系學會辦公室的交通方式說明。</p>
+        </div>
+        
+        <div id="suggestion" class="section">
+            <h2>匿名建議表單</h2>
+            <p>有任何想對系學會說的話嗎？歡迎透過這裡匿名提供建議，您的聲音是我們進步的動力！</p>
+            <form class="suggestion-form" action="#" method="post">
+                <textarea name="suggestion" placeholder="請在此輸入您的建議..."></textarea>
+                <button type="submit">送出建議</button>
+            </form>
+        </div>
+
+        <div id="contact" class="section">
+            <h2>聯絡我們</h2>
+            <p><strong>電子郵件：</strong> contact@example.com</p>
+            <p><strong>辦公室地點：</strong> 農學院大樓 OOO室</p>
+            <p><strong>社群媒體：</strong> <a href="#">Facebook</a> | <a href="#">Instagram</a></p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 中興園藝系學會. All Rights Reserved.</p>
+            <div class="maintainer-info">
+                <p>網站維護者：hhter2</p>
+                <p>聯絡方式：maintainer@example.com</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
